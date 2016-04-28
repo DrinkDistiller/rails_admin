@@ -35,7 +35,9 @@
 
 :javascript
   jQuery(function($) {
-  #{ordered_filter_string}
+    if($('#filters_box').html().length == 0){
+    #{ordered_filter_string}
+    }
   });
 
 %style
