@@ -29,4 +29,5 @@ tmp/**/*
 /.emacs.desktop
 .idea/*.xml
 .sass-cache
+.ruby-*
 nbproject
