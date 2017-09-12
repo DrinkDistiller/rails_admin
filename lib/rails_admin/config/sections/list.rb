@@ -5,6 +5,10 @@ module RailsAdmin
     module Sections
       # Configuration of the list view
       class List < RailsAdmin::Config::Sections::Base
+        register_instance_option :checkboxes? do
+          true
+        end
+
         register_instance_option :filters do
           []
         end
@@ -24,6 +28,10 @@ module RailsAdmin
 
         register_instance_option :scopes do
           []
+        end
+
+        register_instance_option :row_css_class do
+          ''
         end
       end
     end

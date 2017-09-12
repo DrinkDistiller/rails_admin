@@ -16,6 +16,15 @@
 
 RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data.
 
+## Announcements
+
+### [Action required] Security issue
+
+**RailsAdmin 1.0.0 and 1.1.0 have been reported to have CSRF vulnerability with default setup.** We strongly recommend that you upgrade RailsAdmin to 1.1.1 or later as soon as possible, if you are on these versions. See [b13e879e](https://github.com/sferik/rails_admin/commit/b13e879eb93b661204e9fb5e55f7afa4f397537a) for the detail.
+
+This problem was reported by SourceClear, Inc.
+
+
 ## Features
 * CRUD any data with ease
 * Custom actions
@@ -33,7 +42,7 @@ RailsAdmin is a Rails engine that provides an easy-to-use interface for managing
 
 ## Installation
 
-1. On your gemfile: `gem 'rails_admin'`
+1. On your gemfile: `gem 'rails_admin', '~> 1.2'`
 2. Run `bundle install`
 3. Run `rails g rails_admin:install`
 4. Provide a namespace for the routes when asked
@@ -88,10 +97,9 @@ If you think you found a bug in RailsAdmin, you can [submit an issue](https://gi
 ## Supported Ruby Versions
 This library aims to support and is [tested against][travis] the following Ruby implementations:
 
-* Ruby 1.9.3
-* Ruby 2.0.0
 * Ruby 2.1
 * Ruby 2.2
+* Ruby 2.3
 * [Rubinius][]
 * [JRuby][]
 
