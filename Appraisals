@@ -181,6 +181,22 @@ appraise "rails-5.2" do
   end
 end
 
+appraise "rails-6.0" do
+  gem 'rails', '~> 6.0.2'
+  gem 'sass-rails', '~> 5.0'
+  gem 'devise', '~> 4.4'
+
+  group :test do
+    gem 'cancancan', '~> 3.0'
+    gem 'rspec-rails', '>= 4.0.0.beta2'
+  end
+
+  group :active_record do
+    gem 'pg', '>= 1.0.0', platforms: :ruby
+    gem 'paper_trail', '>= 5.0'
+  end
+end
+
 appraise "cancan" do
   gem 'rails', '~> 5.1.0'
   gem 'sass-rails', '~> 5.0'
