@@ -41,7 +41,7 @@ module RailsAdmin
         end
 
         def primary_key
-          association.primary_key.to_sym rescue :_id
+          :_id
         end
 
         def foreign_key

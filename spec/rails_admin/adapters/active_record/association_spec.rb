@@ -1,38 +1,38 @@
 require 'spec_helper'
 require 'timecop'
 
-RSpec.describe 'RailsAdmin::Adapters::ActiveRecord::Association', active_record: true do
+describe 'RailsAdmin::Adapters::ActiveRecord::Association', active_record: true do
   before :all do
     RailsAdmin::AbstractModel.reset_polymorphic_parents
 
-    class ARBlog < Tableless
+    class ARBlog < ActiveRecord::Base
       has_many :a_r_posts
       has_many :a_r_comments, as: :commentable
       belongs_to :librarian, polymorphic: true
     end
 
-    class ARPost < Tableless
+    class ARPost < ActiveRecord::Base
       belongs_to :a_r_blog
       has_and_belongs_to_many :a_r_categories
       has_many :a_r_comments, as: :commentable
     end
 
-    class ARCategory < Tableless
+    class ARCategory < ActiveRecord::Base
       has_and_belongs_to_many :a_r_posts
       belongs_to :librarian, polymorphic: true
     end
 
-    class ARUser < Tableless
+    class ARUser < ActiveRecord::Base
       has_one :a_r_profile
       has_many :a_r_categories, as: :librarian
     end
 
-    class ARProfile < Tableless
+    class ARProfile < ActiveRecord::Base
       belongs_to :a_r_user
       has_many :a_r_blogs, as: :librarian
     end
 
-    class ARComment < Tableless
+    class ARComment < ActiveRecord::Base
       belongs_to :commentable, polymorphic: true
     end
 

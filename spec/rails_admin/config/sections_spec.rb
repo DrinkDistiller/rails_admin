@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe RailsAdmin::Config::Sections do
+describe RailsAdmin::Config::Sections do
   describe 'configure' do
     it 'configures without changing the section default list' do
       RailsAdmin.config Team do

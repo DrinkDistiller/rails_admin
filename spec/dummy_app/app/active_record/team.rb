@@ -12,9 +12,11 @@ class Team < ActiveRecord::Base
   validates_numericality_of :losses, only_integer: true
   validates_numericality_of :win_percentage
   validates_numericality_of :revenue, allow_nil: true
-  belongs_to :division, optional: true
+  belongs_to :division
 
-  enum main_sponsor: [:no_sponsor, :food_factory, :transportation_company, :bank, :energy_producer]
+  if ::Rails.version >= '4.1'
+    enum main_sponsor: [:no_sponsor, :food_factory, :transportation_company, :bank, :energy_producer]
+  end
 
   def player_names_truncated
     players.collect(&:name).join(', ')[0..32]

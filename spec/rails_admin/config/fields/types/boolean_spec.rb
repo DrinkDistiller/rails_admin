@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-RSpec.describe RailsAdmin::Config::Fields::Types::Boolean do
+describe RailsAdmin::Config::Fields::Types::Boolean do
   it_behaves_like 'a generic field type', :boolean_field, :boolean
 end

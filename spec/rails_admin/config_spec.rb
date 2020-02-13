@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe RailsAdmin::Config do
+describe RailsAdmin::Config do
   describe '.included_models' do
     it 'only uses included models' do
       RailsAdmin.config.included_models = [Team, League]
@@ -36,7 +36,7 @@ RSpec.describe RailsAdmin::Config do
   describe '.add_extension' do
     before do
       silence_warnings do
-        RailsAdmin.const_set('EXTENSIONS', [])
+        RailsAdmin::EXTENSIONS = [] # rubocop:disable MutableConstant
       end
     end
 

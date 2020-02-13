@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe RailsAdmin::Config::Fields::Types::Uuid do
+describe RailsAdmin::Config::Fields::Types::Uuid do
   let(:uuid) { SecureRandom.uuid }
   let(:object) { FactoryBot.create(:field_test) }
   let(:field) { RailsAdmin.config(FieldTest).fields.detect { |f| f.name == :uuid_field } }

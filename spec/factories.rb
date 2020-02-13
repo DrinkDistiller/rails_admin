@@ -25,8 +25,6 @@ FactoryBot.define do
     sequence(:wins)
     sequence(:losses)
     sequence(:win_percentage)
-
-    factory :managed_team, class: ManagedTeam
   end
 
   factory :league do
@@ -47,7 +45,6 @@ FactoryBot.define do
     sequence(:password) { |_n| 'password' }
 
     factory :user_confirmed, class: User::Confirmed
-    factory :managing_user, class: ManagingUser
   end
 
   factory :field_test do
@@ -84,13 +81,5 @@ FactoryBot.define do
 
   factory :paper_trail_test do
     sequence(:name) { |n| "name #{n}" }
-
-    factory :paper_trail_test_subclass,
-            parent: :paper_trail_test,
-            class: 'PaperTrailTestSubclass'
-
-    factory :paper_trail_test_subclass_in_namespace,
-            parent: :paper_trail_test,
-            class: 'PaperTrailTest::SubclassInNamespace'
   end
 end

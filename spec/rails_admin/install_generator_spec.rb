@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'generators/rails_admin/install_generator'
 
-RSpec.describe RailsAdmin::InstallGenerator, type: :generator do
+describe RailsAdmin::InstallGenerator, type: :generator do
   destination File.expand_path('../../dummy_app/tmp/generator', __FILE__)
   arguments ['admin']
 

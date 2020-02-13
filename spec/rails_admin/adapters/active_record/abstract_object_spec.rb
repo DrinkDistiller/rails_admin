@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe 'RailsAdmin::Adapters::ActiveRecord::AbstractObject', active_record: true do
+describe 'RailsAdmin::Adapters::ActiveRecord::AbstractObject', active_record: true do
   describe 'proxy' do
     let(:object) { double('object') }
     let(:abstract_object) { RailsAdmin::Adapters::ActiveRecord::AbstractObject.new(object) }
