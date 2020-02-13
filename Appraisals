@@ -182,7 +182,7 @@ appraise "rails-5.2" do
 end
 
 appraise "rails-6.0" do
-  gem 'rails', '~> 6.0.2'
+  gem 'rails', '~> 6.0.2.1'
   gem 'sass-rails', '~> 5.0'
   gem 'devise', '~> 4.4'
 
