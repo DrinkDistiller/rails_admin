@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe RailsAdmin::CSVConverter do
+describe RailsAdmin::CSVConverter do
   it 'keeps headers ordering' do
     RailsAdmin.config(Player) do
       export do

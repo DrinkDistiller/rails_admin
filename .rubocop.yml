@@ -7,15 +7,6 @@ AllCops:
     - 'spec/dummy_app/tmp/**/*'
     - 'vendor/bundle/**/*'
 
-Layout/AccessModifierIndentation:
-  EnforcedStyle: outdent
-
-Layout/DotPosition:
-  EnforcedStyle: trailing
-
-Layout/SpaceInsideHashLiteralBraces:
-  EnforcedStyle: no_space
-
 Metrics/AbcSize:
   Max: 69.98 # TODO: Lower to 15
 
@@ -47,9 +38,8 @@ Metrics/ParameterLists:
 Metrics/PerceivedComplexity:
   Max: 14 # TODO: Lower to 7
 
-Naming/FileName:
-  Exclude:
-    - 'lib/rails_admin/bootstrap-sass.rb'
+Style/AccessModifierIndentation:
+  EnforcedStyle: outdent
 
 Style/Alias:
   Enabled: false
@@ -64,6 +54,9 @@ Style/CollectionMethods:
 Style/Documentation:
   Enabled: false
 
+Style/DotPosition:
+  EnforcedStyle: trailing
+
 Style/DoubleNegation:
   Enabled: false
 
@@ -72,6 +65,10 @@ Style/EachWithObject:
 
 Style/Encoding:
   Enabled: false
+
+Style/FileName:
+  Exclude:
+    - 'lib/rails_admin/bootstrap-sass.rb'
 
 Style/FrozenStringLiteralComment:
   Enabled: false
@@ -82,11 +79,11 @@ Style/Lambda:
 Style/RaiseArgs:
   EnforcedStyle: compact
 
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: 'comma'
 
-Style/TrailingCommaInArrayLiteral:
-  EnforcedStyleForMultiline: 'comma'
-
-Style/TrailingCommaInHashLiteral:
+Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: 'comma'

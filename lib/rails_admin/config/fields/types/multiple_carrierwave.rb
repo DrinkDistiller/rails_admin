@@ -12,12 +12,8 @@ module RailsAdmin
               @thumb_method ||= ((versions = value.versions.keys).detect { |k| k.in?([:thumb, :thumbnail, 'thumb', 'thumbnail']) } || versions.first.to_s)
             end
 
-            register_instance_option :keep_value do
-              value.cache_name || value.identifier
-            end
-
-            register_instance_option :delete_value do
-              value.file.filename
+            register_instance_option :delete_key do
+              value.file.identifier
             end
 
             def resource_url(thumb = false)
@@ -31,15 +27,7 @@ module RailsAdmin
           end
 
           register_instance_option :cache_method do
-            "#{name}_cache" unless ::CarrierWave::VERSION >= '2'
-          end
-
-          register_instance_option :keep_method do
-            name if ::CarrierWave::VERSION >= '2'
-          end
-
-          register_instance_option :reorderable? do
-            ::CarrierWave::VERSION >= '2'
+            "#{name}_cache"
           end
 
           register_instance_option :delete_method do
