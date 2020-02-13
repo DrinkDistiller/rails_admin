@@ -26,7 +26,7 @@ module RailsAdmin
 
               @object.set_attributes(params[@abstract_model.param_key])
 
-              action_authorized = !@authorization_adapter || @authorization_adapter.authorize(:update, @abstract_model, @object)
+              action_authorized = !@authorization_adapter || @authorization_adapter.authorized?(:update, @abstract_model, @object)
               changes = @object.changes
               if action_authorized && @object.save
                 @auditing_adapter && @auditing_adapter.update_object(@object, @abstract_model, _current_user, changes)
