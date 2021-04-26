@@ -1,7 +1,7 @@
 module RailsAdmin
   class Version
     MAJOR = 2
-    MINOR = 0
+    MINOR = 1
     PATCH = 1
     PRE = nil
 

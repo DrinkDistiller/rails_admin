@@ -1,20 +1,26 @@
 # RailsAdmin
 
 [![Gem Version](https://img.shields.io/gem/v/rails_admin.svg)][gem]
-[![Build Status](https://img.shields.io/travis/sferik/rails_admin.svg)][travis]
+[![Build Status](https://img.shields.io/github/workflow/status/sferik/rails_admin/Test)][ghactions]
 [![Coverage Status](https://img.shields.io/coveralls/sferik/rails_admin.svg)][coveralls]
 [![Inline docs](http://inch-ci.org/github/sferik/rails_admin.svg)][inch]
 [![Code Climate](https://codeclimate.com/github/sferik/rails_admin.svg)][codeclimate]
 [![SemVer](https://api.dependabot.com/badges/compatibility_score?dependency-name=rails_admin&package-manager=bundler&version-scheme=semver)][semver]
 
 [gem]: https://rubygems.org/gems/rails_admin
-[travis]: https://travis-ci.org/sferik/rails_admin
+[ghactions]: https://github.com/sferik/rails_admin/actions
 [coveralls]: https://coveralls.io/r/sferik/rails_admin
 [inch]: http://inch-ci.org/github/sferik/rails_admin
 [codeclimate]: https://codeclimate.com/github/sferik/rails_admin
 [semver]: https://dependabot.com/compatibility-score.html?dependency-name=rails_admin&package-manager=bundler&version-scheme=semver
 
 RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data.
+
+## Announcements
+
+### [Action required] Security issue
+
+**RailsAdmin 2.0.1, 2.0.0 and up to 1.4.2 have been reported to have XSS vulnerability.** We strongly recommend that you upgrade RailsAdmin to 2.0.2 (and higher) or 1.4.3 as soon as possible, if you are on those versions. See [d72090ec](https://github.com/sferik/rails_admin/commit/d72090ec6a07c3b9b7b48ab50f3d405f91ff4375) for the detail.
 
 ## Getting started
 
@@ -86,7 +92,7 @@ list][list].
 If you think you found a bug in RailsAdmin, you can [submit an issue](https://github.com/sferik/rails_admin/issues/new).
 
 ## Supported Ruby Versions
-This library aims to support and is [tested against][travis] the following Ruby implementations:
+This library aims to support and is [tested against][ghactions] the following Ruby implementations:
 
 * Ruby 2.2
 * Ruby 2.3
@@ -94,6 +100,7 @@ This library aims to support and is [tested against][travis] the following Ruby 
 * Ruby 2.5
 * Ruby 2.6
 * Ruby 2.7
+* Ruby 3.0
 * [JRuby][]
 
 [jruby]: http://jruby.org/
