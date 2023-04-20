@@ -20,7 +20,7 @@ module RailsAdmin
         end
 
         def save(options = {validate: true})
-          object.save(options)
+          object.save(**options)
         end
 
         def method_missing(name, *args, &block)
